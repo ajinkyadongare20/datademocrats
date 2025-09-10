@@ -16,8 +16,8 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h1 class="fw-bold text-primary mb-4">Chari<span class="text-white">Team</span></h1>
-                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
+                    <h3 class="fw-bold text-primary mb-4">Data<span class="text-white">Democrats</span></h3>
+                    <p>Data Democrats Solution LLP is dedicated to fostering a cohesive ecosystem for digital transformation across industries, driven by expertise, innovation, and integrity.</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square me-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -27,9 +27,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Address</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>403, Millennium Grand, Plot No. 71B, Sector 11, Kharghar, Mumbai, Maharashtra 410210</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>Shop No. 02, Benchmark Commercial Complex, Shri Shri Ravishankar Marg, Khode Nagar, Wadala, Nashik 422006</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@datademocrats.in</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Quick Links</h5>
@@ -53,11 +53,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a href="#">Data Democrats Solution LLP</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                        Designed By <a href="https://lealsolution.com">Leal Software Solution Pvt Ltd</a>
                     </div>
                 </div>
             </div>
@@ -73,6 +72,7 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/lib/wow/wow.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/lib/easing/easing.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/lib/waypoints/waypoints.min.js"></script>

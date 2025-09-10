@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -32,8 +32,8 @@
             }
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -43,8 +43,15 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
+    });
+
+
+    // Facts counter
+    $('[data-toggle="counter-up"]').counterUp({
+        delay: 10,
+        time: 2000
     });
 
 
@@ -53,7 +60,7 @@
         $('.progress .progress-bar').each(function () {
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
         });
-    }, {offset: '80%'});
+    }, { offset: '80%' });
 
 
     // Testimonials carousel
@@ -63,21 +70,55 @@
         center: true,
         dots: false,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             }
         }
     });
 
-    
+    // Careers Page Functionality
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize application modal if it exists on the page
+        if (document.querySelector('.apply-btn')) {
+            const applyButtons = document.querySelectorAll('.apply-btn');
+            const applicationModal = new bootstrap.Modal(document.getElementById('applicationModal'));
+            const positionSelect = document.getElementById('positionApplied');
+
+            applyButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const position = this.getAttribute('data-position');
+                    if (positionSelect) positionSelect.value = position;
+                    if (applicationModal) applicationModal.show();
+                });
+            });
+        }
+
+        // Form validation for application form
+        if (document.getElementById('applicationForm')) {
+            document.getElementById('applicationForm').addEventListener('submit', function (e) {
+                if (!this.checkValidity()) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+                this.classList.add('was-validated');
+            });
+        }
+    });
+
+    document.addEventListener('wpcf7mailsent', function (event) {
+        // Replace this with your custom toast code
+        alert('✅ Message sent!');
+    }, false);
+
+
 })(jQuery);
 
