@@ -113,7 +113,7 @@ get_header();
                     </div>
                     <div class="col-6 text-start">
                         <img class="img-fluid w-75 wow zoomIn" data-wow-delay="0.7s"
-                            src="<?php bloginfo('template_directory'); ?>/img/carousel-1.jpg">
+                            src="<?php bloginfo('template_directory'); ?>/img/carousel-4.jpg">
                     </div>
                 </div>
             </div>
@@ -260,7 +260,7 @@ get_header();
             </div>
            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="position-relative overflow-hidden pe-5 pt-5 h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="<?php bloginfo('template_directory'); ?>/img/carousel-2.jpg" alt="SD-WAN Solutions" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="<?php bloginfo('template_directory'); ?>/img/technology/AIML Powered.jpg" alt="SD-WAN Solutions" style="object-fit: cover;">
                     <img class="position-absolute top-0 end-0 bg-white ps-3 pb-3" src="<?php bloginfo('template_directory'); ?>/img/carousel-1.jpg" alt="SD-WAN Features" style="width: 200px; height: 200px">
                 </div>
             </div>
@@ -272,7 +272,7 @@ get_header();
 
 <!-- FAQ Start -->
 <div class="container-fluid faq-section bg-light py-5">
-    <div class="container py-5">
+    <div class="container py-0 py-lg-5">
         <div class="row g-4 g-lg-5">
             <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
                 <h4 class="text-primary">FAQs - Data Democrats Solution LLP</h4>

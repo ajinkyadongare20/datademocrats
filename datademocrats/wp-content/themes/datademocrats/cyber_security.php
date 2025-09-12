@@ -115,7 +115,7 @@ get_header();
                     </div>
                     <div class="col-6 text-start">
                         <img class="img-fluid w-75 wow zoomIn" data-wow-delay="0.7s"
-                            src="<?php bloginfo('template_directory'); ?>/img/carousel-1.jpg">
+                            src="<?php bloginfo('template_directory'); ?>/img/carousel-4.jpg">
                     </div>
                 </div>
             </div>
@@ -214,74 +214,62 @@ get_header();
 <!-- End Cyber Security Content -->
 
 
-<!-- Start Why Businesses Choose Data Democrats -->
+<!--Start Why Businesses Choose Data Democrats -->
 <div class="container-xxl py-5">
     <div class="container py-5">
-        <div class="row g-5 align-items-center">
-            
-            <!-- Left Content -->
+        <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-primary text-uppercase mb-2">Why Businesses Choose Data Democrats</h6>
-                <h1 class="display-6 mb-4">Comprehensive, Proactive & Reliable Cybersecurity Solutions</h1>
+                <h1 class="display-6 mb-4">Smarter, Connected & Scalable IoT Solutions</h1>
                 <p class="mb-5">
-                    Data Democrats protects organizations with advanced Cybersecurity solutions designed
-                    to safeguard critical data, prevent breaches, and ensure regulatory compliance.
-                    With capabilities in threat intelligence, endpoint protection, and incident response, 
-                    we deliver resilient, scalable, and future-ready cybersecurity frameworks.
+                    IoT enables smart, connected solutions across homes, healthcare, industry, cities, agriculture, retail, 
+                    and transportation—improving efficiency, automation, and real-time decision-making. Data Democrats 
+                    empowers organizations with IoT capabilities to achieve seamless operations, actionable insights, 
+                    and future-ready digital ecosystems.
                 </p>
-                <div class="row gy-4 gx-4">
-                    
-                    <!-- Threat Intelligence -->
+                <div class="row gy-5 gx-4">
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                         <div class="d-flex align-items-center mb-3">
                             <div class="flex-shrink-0 btn-square bg-primary me-3">
-                                <i class="fa fa-shield-alt text-white"></i>
+                                <i class="fa fa-check text-white"></i>
                             </div>
-                            <h5 class="mb-0">Threat Intelligence</h5>
+                            <h5 class="mb-0">Real-Time Monitoring</h5>
                         </div>
-                        <span>Monitor and predict cyber threats to stay ahead of attackers.</span>
+                        <span>Track devices and operations instantly for faster decision-making and operational efficiency.</span>
                     </div>
-
-                    <!-- Endpoint Protection -->
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
                         <div class="d-flex align-items-center mb-3">
                             <div class="flex-shrink-0 btn-square bg-primary me-3">
-                                <i class="fa fa-shield-alt text-white"></i>
+                                <i class="fa fa-check text-white"></i>
                             </div>
-                            <h5 class="mb-0">Endpoint Protection</h5>
+                            <h5 class="mb-0">Predictive Maintenance</h5>
                         </div>
-                        <span>Secure devices and networks against malware, ransomware, and unauthorized access.</span>
+                        <span>Anticipate equipment failures and reduce downtime with AI-driven predictive analytics.</span>
                     </div>
-
-                    <!-- Incident Response -->
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
                         <div class="d-flex align-items-center mb-3">
                             <div class="flex-shrink-0 btn-square bg-primary me-3">
-                                <i class="fa fa-shield-alt text-white"></i>
+                                <i class="fa fa-check text-white"></i>
                             </div>
-                            <h5 class="mb-0">Incident Response</h5>
+                            <h5 class="mb-0">Edge Intelligence</h5>
                         </div>
-                        <span>Quickly identify, respond, and mitigate security incidents to minimize impact.</span>
+                        <span>Process and analyze data at the edge for faster insights and reduced network load.</span>
                     </div>
-
-                    <!-- Compliance & Governance -->
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
                         <div class="d-flex align-items-center mb-3">
                             <div class="flex-shrink-0 btn-square bg-primary me-3">
-                                <i class="fa fa-shield-alt text-white"></i>
+                                <i class="fa fa-check text-white"></i>
                             </div>
-                            <h5 class="mb-0">Compliance & Governance</h5>
+                            <h5 class="mb-0">Secure & Scalable IoT</h5>
                         </div>
-                        <span>Ensure adherence to industry regulations and maintain robust security policies.</span>
+                        <span>Ensure data security, privacy, and scalability across IoT deployments with robust governance.</span>
                     </div>
                 </div>
             </div>
-
-            <!-- Right Image -->
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="position-relative overflow-hidden pe-5 pt-5 h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="<?php bloginfo('template_directory'); ?>/img/carousel-2.jpg" alt="SD-WAN Solutions" style="object-fit: cover;">
-                    <img class="position-absolute top-0 end-0 bg-white ps-3 pb-3" src="<?php bloginfo('template_directory'); ?>/img/carousel-1.jpg" alt="SD-WAN Features" style="width: 200px; height: 200px">
+                    <img class="position-absolute w-100 h-100" src="<?php bloginfo('template_directory'); ?>/img/technology/Cyber Security.jpg" alt="IoT Solutions" style="object-fit: cover;">
+                    <img class="position-absolute top-0 end-0 bg-white ps-3 pb-3" src="<?php bloginfo('template_directory'); ?>/img/carousel-1.jpg" alt="IoT Features" style="width: 200px; height: 200px">
                 </div>
             </div>
         </div>
@@ -292,7 +280,7 @@ get_header();
 
 <!-- FAQ Start -->
 <div class="container-fluid faq-section bg-light py-5">
-    <div class="container py-5">
+    <div class="container py-0 py-lg-5">
         <div class="row g-4 g-lg-5">
             <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
                 <h4 class="text-primary">FAQs - Data Democrats Solution LLP</h4>

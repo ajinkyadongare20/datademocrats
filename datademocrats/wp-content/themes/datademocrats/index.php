@@ -36,7 +36,7 @@ get_header();
                                     efficiency, and secure growth in a connected world.
                                 </p>
                                 <a class="btn btn-primary py-2 px-3 animated slideInDown"
-                                    href="https://datademocrats.in" target="_blank">
+                                    href="https://datademocrats.com/" target="_blank">
                                     Discover More
                                     <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                                         <i class="fa fa-arrow-right"></i>
@@ -63,7 +63,7 @@ get_header();
                                     customer-first mindset—delivering solutions that create real business impact.
                                 </p>
                                 <a class="btn btn-primary py-2 px-3 animated slideInDown"
-                                    href="https://datademocrats.in/about" target="_blank">
+                                    href="https://datademocrats.com//about" target="_blank">
                                     About Us
                                     <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                                         <i class="fa fa-arrow-right"></i>
@@ -91,7 +91,7 @@ get_header();
                                     deliver end-to-end solutions for a smarter, safer, and connected future.
                                 </p>
                                 <a class="btn btn-primary py-2 px-3 animated slideInDown"
-                                    href="https://datademocrats.in/services" target="_blank">
+                                    href="https://datademocrats.com//services" target="_blank">
                                     Explore Services
                                     <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                                         <i class="fa fa-arrow-right"></i>
@@ -158,14 +158,14 @@ get_header();
                         to be the trusted partner for digital growth and resilience.
                     </p>
 
-                    <a class="btn btn-primary py-2 px-3 me-3" href="https://datademocrats.in/about" target="_blank">
+                    <a class="btn btn-primary py-2 px-3 me-3" href="https://datademocrats.com//about" target="_blank">
                         Learn More
                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
                         </div>
                     </a>
-                    <a class="btn btn-outline-primary py-2 px-3 mt-3 mt-lg-0 py-2 px-3" href="https://datademocrats.in/contact"
-                        target="_blank">
+                    <a class="btn btn-outline-primary py-2 px-3 mt-3 mt-lg-0 py-2 px-3"
+                        href="https://datademocrats.com//contact" target="_blank">
                         Contact Us
                         <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
@@ -214,10 +214,11 @@ get_header();
                         </div>
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/courses-1.jpg"
+                        <img class="img-fluid"
+                            src="<?php bloginfo('template_directory'); ?>/img/index/causes/sd_wan_causes.jpg"
                             alt="SD-WAN">
                         <div class="causes-overlay">
-                            <a class="btn btn-outline-primary" href="https://datademocrats.in/services/sd-wan"
+                            <a class="btn btn-outline-primary" href="https://datademocrats.com//services/sd-wan"
                                 target="_blank">
                                 Learn More
                                 <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
@@ -254,10 +255,11 @@ get_header();
                         </div>
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/courses-2.jpg"
+                        <img class="img-fluid"
+                            src="<?php bloginfo('template_directory'); ?>/img/index/causes/cybersecurity_causes.jpg"
                             alt="Cybersecurity">
                         <div class="causes-overlay">
-                            <a class="btn btn-outline-primary" href="https://datademocrats.in/services/cybersecurity"
+                            <a class="btn btn-outline-primary" href="https://datademocrats.com//services/cybersecurity"
                                 target="_blank">
                                 Learn More
                                 <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
@@ -294,10 +296,11 @@ get_header();
                         </div>
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/courses-3.jpg"
+                        <img class="img-fluid"
+                            src="<?php bloginfo('template_directory'); ?>/img/index/causes/Internet of Things (IoT)_causes.jpg"
                             alt="IoT Solutions">
                         <div class="causes-overlay">
-                            <a class="btn btn-outline-primary" href="https://datademocrats.in/services/iot"
+                            <a class="btn btn-outline-primary" href="https://datademocrats.com//services/iot"
                                 target="_blank">
                                 Learn More
                                 <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
@@ -334,10 +337,11 @@ get_header();
                         </div>
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/courses-1.jpg"
+                        <img class="img-fluid"
+                            src="<?php bloginfo('template_directory'); ?>/img/index/causes/data_anyalst_causes.jpg"
                             alt="Data & AI">
                         <div class="causes-overlay">
-                            <a class="btn btn-outline-primary" href="https://datademocrats.in/services/data-analytics"
+                            <a class="btn btn-outline-primary" href="https://datademocrats.com//services/data-analytics"
                                 target="_blank">
                                 Learn More
                                 <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
@@ -374,10 +378,11 @@ get_header();
                         </div>
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/courses-2.jpg"
+                        <img class="img-fluid"
+                            src="<?php bloginfo('template_directory'); ?>/img/index/causes/cloud_technology_causes.jpg"
                             alt="Cloud & Data Center">
                         <div class="causes-overlay">
-                            <a class="btn btn-outline-primary" href="https://datademocrats.in/services/cloud"
+                            <a class="btn btn-outline-primary" href="https://datademocrats.com//services/cloud"
                                 target="_blank">
                                 Learn More
                                 <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
@@ -414,10 +419,11 @@ get_header();
                         </div>
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/courses-3.jpg"
+                        <img class="img-fluid"
+                            src="<?php bloginfo('template_directory'); ?>/img/index/causes/illustration_ smart factory_causes.jpg"
                             alt="Industry 4.0">
                         <div class="causes-overlay">
-                            <a class="btn btn-outline-primary" href="https://datademocrats.in/services/industry4"
+                            <a class="btn btn-outline-primary" href="https://datademocrats.com//services/industry4"
                                 target="_blank">
                                 Learn More
                                 <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
@@ -454,10 +460,11 @@ get_header();
                         </div>
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/courses-1.jpg"
+                        <img class="img-fluid"
+                            src="<?php bloginfo('template_directory'); ?>/img/index/causes/AI_ML surveillance_causes.jpg"
                             alt="AI Surveillance">
                         <div class="causes-overlay">
-                            <a class="btn btn-outline-primary" href="https://datademocrats.in/services/surveillance"
+                            <a class="btn btn-outline-primary" href="https://datademocrats.com//services/surveillance"
                                 target="_blank">
                                 Learn More
                                 <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
@@ -494,10 +501,11 @@ get_header();
                         </div>
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/courses-1.jpg"
+                        <img class="img-fluid"
+                            src="<?php bloginfo('template_directory'); ?>/img/index/causes/smart_city_causes.jpg"
                             alt="Smart City">
                         <div class="causes-overlay">
-                            <a class="btn btn-outline-primary" href="https://datademocrats.in/services/smart-city"
+                            <a class="btn btn-outline-primary" href="https://datademocrats.com//services/smart-city"
                                 target="_blank">
                                 Learn More
                                 <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
@@ -534,10 +542,11 @@ get_header();
                         </div>
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/courses-1.jpg"
+                        <img class="img-fluid"
+                            src="<?php bloginfo('template_directory'); ?>/img/index/causes/smart_city_causes.jpg"
                             alt="Smart City">
                         <div class="causes-overlay">
-                            <a class="btn btn-outline-primary" href="https://datademocrats.in/services/smart-city"
+                            <a class="btn btn-outline-primary" href="https://datademocrats.com//services/smart-city"
                                 target="_blank">
                                 Learn More
                                 <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
@@ -571,7 +580,7 @@ get_header();
                     <h5 class="mb-3">SD-WAN Solutions</h5>
                     <p class="mb-4">Next-gen networking with centralized management, enhanced security, cost efficiency,
                         and real-time performance monitoring.</p>
-                    <a class="btn btn-outline-primary px-3" href="https://datademocrats.in/sdwan" target="_blank">
+                    <a class="btn btn-outline-primary px-3" href="https://datademocrats.com//sdwan" target="_blank">
                         Learn More
                         <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
@@ -589,7 +598,7 @@ get_header();
                     <h5 class="mb-3">Cybersecurity & Threat Detection</h5>
                     <p class="mb-4">AI-driven defense with real-time threat monitoring, automated response, and advanced
                         behavior analysis to protect your assets.</p>
-                    <a class="btn btn-outline-primary px-3" href="https://datademocrats.in/cybersecurity"
+                    <a class="btn btn-outline-primary px-3" href="https://datademocrats.com//cybersecurity"
                         target="_blank">
                         Learn More
                         <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
@@ -607,7 +616,7 @@ get_header();
                     <h5 class="mb-3">IoT & Smart Connectivity</h5>
                     <p class="mb-4">IoT-powered solutions that connect devices, improve automation, and provide
                         actionable insights across industries.</p>
-                    <a class="btn btn-outline-primary px-3" href="https://datademocrats.in/iot" target="_blank">
+                    <a class="btn btn-outline-primary px-3" href="https://datademocrats.com//iot" target="_blank">
                         Learn More
                         <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
@@ -624,7 +633,7 @@ get_header();
                     <h5 class="mb-3">Data Analytics & AI</h5>
                     <p class="mb-4">Transform data into actionable insights with AI, predictive analytics, and
                         automation to support smarter decision-making.</p>
-                    <a class="btn btn-outline-primary px-3" href="https://datademocrats.in/ai" target="_blank">
+                    <a class="btn btn-outline-primary px-3" href="https://datademocrats.com//ai" target="_blank">
                         Learn More
                         <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
@@ -641,7 +650,7 @@ get_header();
                     <h5 class="mb-3">Cloud & Data Center Services</h5>
                     <p class="mb-4">Scalable and secure cloud migration, hybrid infrastructure, and data center
                         modernization for future-ready enterprises.</p>
-                    <a class="btn btn-outline-primary px-3" href="https://datademocrats.in/cloud" target="_blank">
+                    <a class="btn btn-outline-primary px-3" href="https://datademocrats.com//cloud" target="_blank">
                         Learn More
                         <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
@@ -659,7 +668,7 @@ get_header();
                     <h5 class="mb-3">AI Surveillance & Smart Cities</h5>
                     <p class="mb-4">AI/ML-powered surveillance, safe city projects, and real-time analytics ensuring
                         smarter, safer, and more connected communities.</p>
-                    <a class="btn btn-outline-primary px-3" href="https://datademocrats.in/smartcity" target="_blank">
+                    <a class="btn btn-outline-primary px-3" href="https://datademocrats.com//smartcity" target="_blank">
                         Learn More
                         <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
@@ -838,9 +847,9 @@ get_header();
                     <h1 class="display-6 mb-0">Driving Digital Transformation with Trust & Innovation</h1>
                 </div>
                 <p class="mb-5">
-                    At Data Democrats Solution LLP, we specialize in enabling organizations to thrive in the digital era 
-                    through innovation, scalable technology solutions, and trusted partnerships. With expertise across 
-                    AI, Cybersecurity, Cloud, IoT, and Industry 4.0, we help businesses achieve growth, efficiency, and 
+                    At Data Democrats Solution LLP, we specialize in enabling organizations to thrive in the digital era
+                    through innovation, scalable technology solutions, and trusted partnerships. With expertise across
+                    AI, Cybersecurity, Cloud, IoT, and Industry 4.0, we help businesses achieve growth, efficiency, and
                     lasting impact.
                 </p>
                 <div class="row gy-4 gy-lg-5 gx-4 gx-lg-5">
@@ -856,7 +865,8 @@ get_header();
                             <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
                             <h6 class="mb-0">Industry-Focused Solutions</h6>
                         </div>
-                        <span>Tailored digital transformation strategies for manufacturing, smart cities, healthcare, and more.</span>
+                        <span>Tailored digital transformation strategies for manufacturing, smart cities, healthcare,
+                            and more.</span>
                     </div>
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
                         <div class="d-flex align-items-center mb-3">
@@ -870,15 +880,16 @@ get_header();
                             <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
                             <h6 class="mb-0">End-to-End Support</h6>
                         </div>
-                        <span>From strategy to implementation, we deliver complete digital transformation services.</span>
+                        <span>From strategy to implementation, we deliver complete digital transformation
+                            services.</span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 400px;">
                     <img class="position-absolute w-100 h-100"
-                        src="<?php bloginfo('template_directory'); ?>/img/team-4.jpg" alt="Data Democrats Team"
-                        style="object-fit: cover;">
+                        src="<?php bloginfo('template_directory'); ?>/img/index/our_core_strength.jpg"
+                        alt="Data Democrats Team" style="object-fit: cover;">
                     <div class="position-absolute top-0 start-0 bg-white pe-3 pb-3"
                         style="width: 200px; height: 200px;">
                         <div class="d-flex flex-column justify-content-center text-center bg-primary h-100 p-3">
@@ -893,7 +904,6 @@ get_header();
     </div>
 </div>
 <!-- Our Core Strengths End -->
-
 
 
 <!-- Team Start -->
@@ -1082,6 +1092,48 @@ get_header();
 <!-- Testimonial End -->
 
 
+<!-- Vendor Start -->
+<div class="container-fluid py-5">
+    <div class="row px-xl-5">
+        <div class="col">
+            <div class="owl-carousel vendor-carousel">
+                <div class="bg-light p-4">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/partners/NEC.jpeg" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/partners/IDIS.jpeg" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/partners/CISCO SYSTEMS.jpeg" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/partners/ESDS.jpeg" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/partners/ISHANI.jpeg" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/partners/BPE.jpeg" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/partners/BAY DATACOM.jpeg" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/partners/ARHASI.jpeg" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/partners/AMTRON.jpeg" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/partners/LEAL SOLUTION.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Vendor End -->
+
+
 <!-- FAQ Start -->
 <div class="container-fluid faq-section bg-light py-5">
     <div class="container py-5">
@@ -1090,7 +1142,7 @@ get_header();
                 <h4 class="text-primary">FAQs - Data Democrats</h4>
                 <h1 class="display-4 mb-4">Frequently Asked Questions</h1>
                 <p class="mb-4">
-                    Have questions about our data solutions, analytics services, or digital transformation offerings?  
+                    Have questions about our data solutions, analytics services, or digital transformation offerings?
                     Here you’ll find answers to the most common queries from our clients.
                 </p>
                 <a class="btn btn-primary py-3 px-5" href="#contact">Ask Your Question</a>
@@ -1109,7 +1161,8 @@ get_header();
                             <div id="collapseOne" class="accordion-collapse collapse show active"
                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    A: We specialize in data analytics, business intelligence, cloud solutions, AI/ML integrations,
+                                    A: We specialize in data analytics, business intelligence, cloud solutions, AI/ML
+                                    integrations,
                                     and digital transformation strategies to help businesses make data-driven decisions.
                                 </div>
                             </div>
@@ -1141,7 +1194,8 @@ get_header();
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    A: We work across multiple industries such as finance, healthcare, retail, manufacturing,
+                                    A: We work across multiple industries such as finance, healthcare, retail,
+                                    manufacturing,
                                     education, and IT — enabling each to harness the power of data effectively.
                                 </div>
                             </div>
@@ -1173,8 +1227,9 @@ get_header();
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    A: You can reach out through our contact page or request a free consultation.  
-                                    Our experts will assess your needs and recommend the best solutions for your business.
+                                    A: You can reach out through our contact page or request a free consultation.
+                                    Our experts will assess your needs and recommend the best solutions for your
+                                    business.
                                 </div>
                             </div>
                         </div>
@@ -1199,16 +1254,18 @@ get_header();
                 </div>
                 <div class="row gx-3">
                     <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                        <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Quick Response Within 24 Hours</h5>
+                        <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Quick Response Within 24 Hours
+                        </h5>
                     </div>
                     <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
                         <h5 class="mb-4"><i class="fa fa-headset text-primary me-3"></i>Expert Data & Tech Support</h5>
                     </div>
                 </div>
                 <p class="mb-4">
-                    Ready to unlock the power of data-driven decision-making?  
-                    Data Democrats helps businesses with analytics, AI, cloud solutions, and digital transformation.  
-                    Share your details and our experts will connect with you to discuss tailored solutions for your needs.
+                    Ready to unlock the power of data-driven decision-making?
+                    Data Democrats helps businesses with analytics, AI, cloud solutions, and digital transformation.
+                    Share your details and our experts will connect with you to discuss tailored solutions for your
+                    needs.
                 </p>
                 <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
                     <div class="bg-primary d-flex align-items-center justify-content-center rounded"

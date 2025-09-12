@@ -83,7 +83,7 @@ get_header();
                     </div>
                     <div class="col-6 text-start">
                         <img class="img-fluid w-75 wow zoomIn" data-wow-delay="0.7s"
-                            src="<?php bloginfo('template_directory'); ?>/img/carousel-1.jpg">
+                            src="<?php bloginfo('template_directory'); ?>/img/carousel-4.jpg">
                     </div>
                 </div>
             </div>
@@ -269,10 +269,10 @@ get_header();
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="position-relative overflow-hidden pe-5 pt-5 h-100" style="min-height: 400px;">
                     <img class="position-absolute w-100 h-100"
-                        src="<?php bloginfo('template_directory'); ?>/img/team-1.jpg"
+                        src="<?php bloginfo('template_directory'); ?>/img/services/2.jpg"
                         alt="Why Choose Data Democrats" style="object-fit: cover;">
                     <img class="position-absolute top-0 end-0 bg-white ps-3 pb-3"
-                        src="<?php bloginfo('template_directory'); ?>/img/team-4.jpg"
+                        src="<?php bloginfo('template_directory'); ?>/img/services/1.jpg"
                         alt="Data Democrats" style="width: 200px; height: 200px">
                 </div>
             </div>
@@ -458,7 +458,7 @@ get_header();
 
 <!-- Quote Start -->
 <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
+    <div class="container py-0 py-lg-5">
         <div class="row g-5">
             <div class="col-lg-7">
                 <div class="section-title position-relative pb-3 mb-5">

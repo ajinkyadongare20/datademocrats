@@ -85,6 +85,35 @@
         }
     });
 
+    // Client OwlCarousel Logo
+    $('.vendor-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 2000, // 2 seconds
+        smartSpeed: 1000,
+        dots: false,
+        responsive: {
+            0: {
+                items: 2
+            },
+            576: {
+                items: 3
+            },
+            768: {
+                items: 4
+            },
+            992: {
+                items: 5
+            },
+            1200: {
+                items: 6
+            }
+        }
+    });
+
+
     // Careers Page Functionality
     document.addEventListener('DOMContentLoaded', function () {
         // Initialize application modal if it exists on the page

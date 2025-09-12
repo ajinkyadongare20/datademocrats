@@ -116,7 +116,7 @@ get_header();
                     </div>
                     <div class="col-6 text-start">
                         <img class="img-fluid w-75 wow zoomIn" data-wow-delay="0.7s"
-                            src="<?php bloginfo('template_directory'); ?>/img/carousel-1.jpg">
+                            src="<?php bloginfo('template_directory'); ?>/img/carousel-4.jpg">
                     </div>
                 </div>
             </div>
@@ -215,66 +215,61 @@ get_header();
 <!-- End Industry 4.0 Content -->
 
 
-<!-- Start Why Businesses Choose Data Democrats -->
+<!--Start Why Businesses Choose Data Democrats -->
 <div class="container-xxl py-5">
     <div class="container py-5">
-        <div class="row g-5 align-items-center">
-            
-            <!-- Left Content -->
+        <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-primary text-uppercase mb-2">Why Businesses Choose Data Democrats</h6>
-                <h1 class="display-6 mb-4">Smarter, Faster & Responsible Data Analytics & AI Solutions</h1>
+                <h1 class="display-6 mb-4">Smarter, Connected & Scalable Digital Transformation Solutions</h1>
                 <p class="mb-5">
-                    Data Democrats empowers organizations with advanced Data Analytics & AI solutions designed
-                    to unlock real-time insights, improve decision-making, and drive intelligent automation.
-                    With capabilities in generative AI, edge computing, and explainability, we ensure
-                    responsible, scalable, and future-ready innovation.
+                    Industry 4.0 transforms manufacturing and enterprise operations through smart connectivity, automation, 
+                    AI-driven insights, and integrated digital systems. Data Democrats enables organizations to achieve 
+                    efficient, flexible, and data-driven operations with future-ready digital solutions.
                 </p>
-                <div class="row gy-4 gx-4">
+                <div class="row gy-5 gx-4">
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                         <div class="d-flex align-items-center mb-3">
                             <div class="flex-shrink-0 btn-square bg-primary me-3">
                                 <i class="fa fa-check text-white"></i>
                             </div>
-                            <h5 class="mb-0">Real-Time Insights</h5>
+                            <h5 class="mb-0">Smart Connectivity</h5>
                         </div>
-                        <span>Analyze and act on data instantly for faster, smarter decision-making.</span>
+                        <span>Connect systems, devices, and processes seamlessly for streamlined operations.</span>
                     </div>
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
                         <div class="d-flex align-items-center mb-3">
                             <div class="flex-shrink-0 btn-square bg-primary me-3">
                                 <i class="fa fa-check text-white"></i>
                             </div>
-                            <h5 class="mb-0">Generative AI</h5>
+                            <h5 class="mb-0">Automation & AI</h5>
                         </div>
-                        <span>Leverage AI models for content generation, predictions, and intelligent automation.</span>
+                        <span>Leverage AI-driven analytics and automated workflows for smarter decision-making.</span>
                     </div>
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
                         <div class="d-flex align-items-center mb-3">
                             <div class="flex-shrink-0 btn-square bg-primary me-3">
                                 <i class="fa fa-check text-white"></i>
                             </div>
-                            <h5 class="mb-0">Edge Computing</h5>
+                            <h5 class="mb-0">Integrated Digital Systems</h5>
                         </div>
-                        <span>Process and analyze data closer to the source for speed and efficiency.</span>
+                        <span>Unify operations with connected platforms for real-time visibility and control.</span>
                     </div>
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
                         <div class="d-flex align-items-center mb-3">
                             <div class="flex-shrink-0 btn-square bg-primary me-3">
                                 <i class="fa fa-check text-white"></i>
                             </div>
-                            <h5 class="mb-0">Explainability & Trust</h5>
+                            <h5 class="mb-0">Data-Driven Insights</h5>
                         </div>
-                        <span>Ensure transparency and reliability with explainable AI models and governance.</span>
+                        <span>Transform operational data into actionable insights for proactive management.</span>
                     </div>
                 </div>
             </div>
-
-            <!-- Right Image -->
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="position-relative overflow-hidden pe-5 pt-5 h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="<?php bloginfo('template_directory'); ?>/img/carousel-2.jpg" alt="SD-WAN Solutions" style="object-fit: cover;">
-                    <img class="position-absolute top-0 end-0 bg-white ps-3 pb-3" src="<?php bloginfo('template_directory'); ?>/img/carousel-1.jpg" alt="SD-WAN Features" style="width: 200px; height: 200px">
+                    <img class="position-absolute w-100 h-100" src="<?php bloginfo('template_directory'); ?>/img/technology/Digital Transformation.jpg" alt="Digital Transformation Solutions" style="object-fit: cover;">
+                    <img class="position-absolute top-0 end-0 bg-white ps-3 pb-3" src="<?php bloginfo('template_directory'); ?>/img/carousel-1.jpg" alt="Digital Transformation Features" style="width: 200px; height: 200px">
                 </div>
             </div>
         </div>
@@ -285,7 +280,7 @@ get_header();
 
 <!-- FAQ Start -->
 <div class="container-fluid faq-section bg-light py-5">
-    <div class="container py-5">
+    <div class="container py-0 py-lg-5">
         <div class="row g-4 g-lg-5">
             <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
                 <h4 class="text-primary">FAQs - Data Democrats Solution LLP</h4>
