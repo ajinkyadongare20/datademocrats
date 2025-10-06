@@ -13,16 +13,29 @@
  */
 
 get_header();
+$index_page_id = 9;
+$quote_page_id = 18;
 ?>
 
 <!-- Page Header Start -->
 <div class="container-fluid page-header py-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center py-5">
-        <h1 class="display-4 text-white animated slideInDown pt-5 mb-4">Career</h1>
+        <h1 class="display-4 text-white animated slideInDown m-5">
+            <?php echo esc_html(get_field('career_breadcrumb_page')); ?>
+        </h1>
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                <li class="breadcrumb-item text-light active" aria-current="page">Career</li>
+                <li class="breadcrumb-item">
+                    <a class="text-white" href="<?php echo esc_url(get_field('career_breadcrumb_home_link')); ?>">
+                        <?php 
+                            $home_text = get_field('career_breadcrumb_home_text'); 
+                            echo $home_text ? esc_html($home_text) : 'Home'; 
+                        ?>
+                    </a>
+                </li>
+                <li class="breadcrumb-item text-light active" aria-current="page">
+                    <?php echo esc_html(get_field('career_breadcrumb_page')); ?>
+                </li>
             </ol>
         </nav>
     </div>
@@ -35,160 +48,68 @@ get_header();
     <div class="container py-5">
         <div class="d-flex flex-column mx-auto text-start text-lg-center mb-5 wow fadeInUp" data-wow-delay="0.2s"
             style="max-width: 800px;">
-            <h4 class="text-secondary">Careers at Democrafts</h4>
-            <h1 class="display-6 mb-4">Build Your Future With Us</h1>
-            <p class="mb-0">At Democrafts, we create innovative digital solutions for businesses worldwide. If you’re driven by technology, creativity, and impact, join our team and shape the future with us.</p>
+            <h1 class="display-6 mb-4">
+                <?php echo esc_html(get_field('career_main_heading')); ?>
+            </h1>
+            <?php echo wp_kses_post(get_field('career_main_heading_description')); ?>
         </div>
         <div class="row g-4">
+
+            <?php 
+                    $career_application = new WP_Query(array(
+                        'post_type'      => 'career_application',
+                        'posts_per_page' => -1,
+                        'orderby'        => 'date',
+                        'order'          => 'ASC'
+                    ));
+
+                    if ($career_application->have_posts()) :
+                        while ($career_application->have_posts()) : $career_application->the_post(); ?>
+            <?php 
+            $career_application_image = get_field('career_application_image');
+            ?>
 
             <!-- Software Developer -->
             <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="career-item">
+                    <?php if ($career_application_image) : ?>
                     <div class="career-img">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/careers/carousel-1.jpg"
-                            class="career-img-fluid w-100" alt="Software Developer">
+                        <img src="<?php echo esc_url($career_application_image); ?>" class="career-img-fluid w-100"
+                            alt="Software Developer">
                     </div>
+                    <?php endif; ?>
                     <div class="career-heading ms-2 my-3">
-                        <a href="#" class="h4 mb-0 p-1">Software Developer</a>
+                        <a href="#" class="h4 mb-0 p-1">
+                            <?php echo esc_html(get_field('career_desgination')); ?>
+                        </a>
                     </div>
                     <div class="career-content bg-light p-4">
                         <div class="d-flex justify-content-between mb-4">
-                            <p class="mb-0 small"><i class="fa fa-map-marker me-2"></i> Pune, Maharashtra</p>
-                            <p class="mb-0 small"><i class="fa fa-briefcase me-2"></i> Full-time</p>
+                            <p class="mb-0 small"><i class="fa fa-map-marker me-2"></i>
+                                <?php echo esc_html(get_field('career_company_address')); ?>
+                            </p>
+                            <p class="mb-0 small"><i class="fa fa-briefcase me-2"></i>
+                                <?php echo esc_html(get_field('career_company_type')); ?>
+                            </p>
                         </div>
-                        <p class="mb-4">
-                            Work on web and enterprise applications using Java, PHP, and modern frameworks. 2–5 years of coding experience preferred.
-                        </p>
+                        <?php echo wp_kses_post(get_field('career_role_description')); ?>
                         <button class="btn btn-primary py-2 px-4 apply-btn"
-                            data-position="Software Developer">Apply Now</button>
+                            data-position="<?php echo esc_attr(get_field('career_desgination')); ?>">
+                            <?php echo esc_html(get_field('career_apply_text')); ?>
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Frontend Engineer -->
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="career-item">
-                    <div class="career-img">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/careers/carousel-2.jpg"
-                            class="career-img-fluid w-100" alt="Frontend Engineer">
-                    </div>
-                    <div class="career-heading ms-2 my-3">
-                        <a href="#" class="h4 mb-0 p-1">Frontend Engineer</a>
-                    </div>
-                    <div class="career-content bg-light p-4">
-                        <div class="d-flex justify-content-between mb-4">
-                            <p class="mb-0 small"><i class="fa fa-map-marker me-2"></i> Remote / India</p>
-                            <p class="mb-0 small"><i class="fa fa-briefcase me-2"></i> Full-time</p>
-                        </div>
-                        <p class="mb-4">
-                            Build interactive web apps using Angular, React, and modern UI frameworks. Must have strong HTML, CSS, and JavaScript skills.
-                        </p>
-                        <button class="btn btn-primary py-2 px-4 apply-btn"
-                            data-position="Frontend Engineer">Apply Now</button>
-                    </div>
-                </div>
-            </div>
+            <?php endwhile; 
+                wp_reset_postdata();
+            endif;
+            ?>
 
-            <!-- QA Engineer -->
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="career-item">
-                    <div class="career-img">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/careers/carousel-3.jpg"
-                            class="career-img-fluid w-100" alt="QA Engineer">
-                    </div>
-                    <div class="career-heading ms-2 my-3">
-                        <a href="#" class="h4 mb-0 p-1">QA Engineer</a>
-                    </div>
-                    <div class="career-content bg-light p-4">
-                        <div class="d-flex justify-content-between mb-4">
-                            <p class="mb-0 small"><i class="fa fa-map-marker me-2"></i> Pune, Maharashtra</p>
-                            <p class="mb-0 small"><i class="fa fa-briefcase me-2"></i> Full-time</p>
-                        </div>
-                        <p class="mb-4">
-                            Ensure product quality with manual and automated testing. Knowledge of Selenium and API testing tools is a plus.
-                        </p>
-                        <button class="btn btn-primary py-2 px-4 apply-btn"
-                            data-position="QA Engineer">Apply Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Coordinator -->
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="career-item">
-                    <div class="career-img">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/careers/carousel-1.jpg"
-                            class="career-img-fluid w-100" alt="Project Coordinator">
-                    </div>
-                    <div class="career-heading ms-2 my-3">
-                        <a href="#" class="h4 mb-0 p-1">Project Coordinator</a>
-                    </div>
-                    <div class="career-content bg-light p-4">
-                        <div class="d-flex justify-content-between mb-4">
-                            <p class="mb-0 small"><i class="fa fa-map-marker me-2"></i> Pune Office</p>
-                            <p class="mb-0 small"><i class="fa fa-briefcase me-2"></i> Full-time</p>
-                        </div>
-                        <p class="mb-4">
-                            Coordinate client requirements, manage timelines, and support development teams. 2–4 years experience in IT project management preferred.
-                        </p>
-                        <button class="btn btn-primary py-2 px-4 apply-btn"
-                            data-position="Project Coordinator">Apply Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Business Development Executive -->
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                <div class="career-item">
-                    <div class="career-img">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/careers/carousel-2.jpg"
-                            class="career-img-fluid w-100" alt="Business Development Executive">
-                    </div>
-                    <div class="career-heading ms-2 my-3">
-                        <a href="#" class="h4 mb-0 p-1">Business Development Executive</a>
-                    </div>
-                    <div class="career-content bg-light p-4">
-                        <div class="d-flex justify-content-between mb-4">
-                            <p class="mb-0 small"><i class="fa fa-map-marker me-2"></i> Maharashtra / Pan India</p>
-                            <p class="mb-0 small"><i class="fa fa-briefcase me-2"></i> Full-time</p>
-                        </div>
-                        <p class="mb-4">
-                            Identify new opportunities, engage with clients, and support sales targets. Excellent communication and negotiation skills required.
-                        </p>
-                        <button class="btn btn-primary py-2 px-4 apply-btn"
-                            data-position="Business Development Executive">Apply Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- IT Support Engineer -->
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="career-item">
-                    <div class="career-img">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/careers/carousel-3.jpg"
-                            class="career-img-fluid w-100" alt="IT Support Engineer">
-                    </div>
-                    <div class="career-heading ms-2 my-3">
-                        <a href="#" class="h4 mb-0 p-1">IT Support Engineer</a>
-                    </div>
-                    <div class="career-content bg-light p-4">
-                        <div class="d-flex justify-content-between mb-4">
-                            <p class="mb-0 small"><i class="fa fa-map-marker me-2"></i> Pune, Maharashtra</p>
-                            <p class="mb-0 small"><i class="fa fa-briefcase me-2"></i> Full-time</p>
-                        </div>
-                        <p class="mb-4">
-                            Provide technical support for internal systems, manage networks, and ensure uptime. Minimum 2 years of IT support experience required.
-                        </p>
-                        <button class="btn btn-primary py-2 px-4 apply-btn"
-                            data-position="IT Support Engineer">Apply Now</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
 <!-- Careers End -->
-
 
 
 <!-- Application Modal Start -->
@@ -209,88 +130,142 @@ get_header();
 <!-- Application Modal End -->
 
 
+<!-- FAQ Start -->
+<div class="container-fluid faq-section bg-light py-5">
+    <div class="container py-5">
+        <div class="row g-4 g-lg-5">
+            <!-- FAQ Text -->
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                <h4 class="text-primary">
+                    <?php echo esc_html(get_field('faqs_tittle', $index_page_id)); ?>
+                </h4>
+                <h1 class="display-4 mb-4">
+                    <?php echo esc_html(get_field('faqs_heading', $index_page_id)); ?>
+                </h1>
+                <?php echo wp_kses_post(get_field('faqs_description', $index_page_id)); ?>
+                <a class="btn btn-primary py-3 px-5" href="<?php the_field('faqs_link', $index_page_id); ?>">
+                    <?php echo esc_html(get_field('faqs_link_text', $index_page_id)); ?>
+                </a>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
+                <div class="h-100">
+                    <div class="accordion" id="accordionExample">
+                        <?php 
+                        $faqs_cpt = new WP_Query(array(
+                            'post_type'      => 'faqs_cpt',
+                            'posts_per_page' => -1,
+                            'order'          => 'ASC',
+                            'orderby'        => 'menu_order'
+                        ));
+
+                        $count = 0; 
+                        if ($faqs_cpt->have_posts()) :
+                            while ($faqs_cpt->have_posts()) : $faqs_cpt->the_post();
+                                $count++;
+                                $question        = get_field('faqs_question');
+                                $answer          = get_field('faqs_answer');
+                                $heading_id      = 'heading' . $count;
+                                $collapse_id     = 'collapse' . $count;
+                                $show_class      = ($count === 1) ? 'show' : '';
+                                $collapsed_class = ($count === 1) ? '' : 'collapsed';
+                        ?>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="<?php echo esc_attr($heading_id); ?>">
+                                <button class="accordion-button <?php echo esc_attr($collapsed_class); ?>" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#<?php echo esc_attr($collapse_id); ?>"
+                                    aria-expanded="<?php echo ($count === 1) ? 'true' : 'false'; ?>"
+                                    aria-controls="<?php echo esc_attr($collapse_id); ?>">
+                                    <?php echo esc_html($question); ?>
+                                </button>
+                            </h2>
+                            <div id="<?php echo esc_attr($collapse_id); ?>"
+                                class="accordion-collapse collapse <?php echo esc_attr($show_class); ?>"
+                                aria-labelledby="<?php echo esc_attr($heading_id); ?>"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <?php echo wp_kses_post($answer); ?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php 
+                            endwhile; 
+                            wp_reset_postdata(); 
+                        endif;
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Section End -->
+
+
 <!-- Quote Start -->
 <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container py-5">
         <div class="row g-5">
+
+            <!-- Left Content -->
             <div class="col-lg-7">
                 <div class="section-title position-relative pb-3 mb-5">
-                    <h5 class="fw-bold text-primary text-uppercase">Request A Consultation</h5>
-                    <h1 class="mb-0">Kickstart Your Digital Transformation with Data Democrats</h1>
+                    <h5 class="fw-bold text-primary text-uppercase">
+                        <?php echo esc_html(get_field('quote_main_name', $quote_page_id)); ?>
+                    </h5>
+                    <h2 class="mb-0">
+                        <?php echo esc_html(get_field('quote_main_subname', $quote_page_id)); ?>
+                    </h2>
                 </div>
+
                 <div class="row gx-3">
                     <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                        <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Quick Response Within 24 Hours
+                        <h5 class="mb-4">
+                            <i class="fa fa-reply text-primary me-3"></i>
+                            <?php echo esc_html(get_field('quote_main_subheading1', $quote_page_id)); ?>
                         </h5>
                     </div>
                     <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                        <h5 class="mb-4"><i class="fa fa-headset text-primary me-3"></i>Expert Data & Tech Support</h5>
+                        <h5 class="mb-4">
+                            <i class="fa fa-headset text-primary me-3"></i>
+                            <?php echo esc_html(get_field('quote_main_subheading2', $quote_page_id)); ?>
+                        </h5>
                     </div>
                 </div>
-                <p class="mb-4">
-                    Ready to unlock the power of data-driven decision-making?
-                    Data Democrats helps businesses with analytics, AI, cloud solutions, and digital transformation.
-                    Share your details and our experts will connect with you to discuss tailored solutions for your
-                    needs.
+
+                <p>
+                    <?php echo wp_kses_post(get_field('quote_main_description', $quote_page_id)); ?>
                 </p>
+
                 <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
                     <div class="bg-primary d-flex align-items-center justify-content-center rounded"
                         style="width: 60px; height: 60px;">
                         <i class="fa fa-phone-alt text-white"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-2">Need immediate assistance?</h5>
-                        <h4 class="text-primary mb-0">+91-8451963300</h4>
+                        <h5 class="mb-2">
+                            <?php echo esc_html(get_field('quote_main_assistance', $quote_page_id)); ?>
+                        </h5>
+                        <h4 class="text-primary mb-0">
+                            <?php echo esc_html(get_field('quote_contact_number', $quote_page_id)); ?>
+                        </h4>
                     </div>
                 </div>
             </div>
+
+            <!-- Right Form -->
             <div class="col-lg-5">
-                <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <input type="text" class="form-control bg-light border-0" placeholder="Your Name *"
-                                    style="height: 55px;" required>
-                            </div>
-                            <div class="col-12">
-                                <input type="text" class="form-control bg-light border-0" placeholder="Company Name"
-                                    style="height: 55px;">
-                            </div>
-                            <div class="col-12">
-                                <input type="email" class="form-control bg-light border-0" placeholder="Email Address *"
-                                    style="height: 55px;" required>
-                            </div>
-                            <div class="col-12">
-                                <input type="tel" class="form-control bg-light border-0" placeholder="Phone Number"
-                                    style="height: 55px;">
-                            </div>
-                            <div class="col-12">
-                                <select class="form-select bg-light border-0" style="height: 55px;" required>
-                                    <option selected disabled>Type of Inquiry *</option>
-                                    <option value="data-analytics">Data Analytics</option>
-                                    <option value="ai-ml">AI / Machine Learning</option>
-                                    <option value="cloud-solutions">Cloud Solutions</option>
-                                    <option value="digital-transformation">Digital Transformation</option>
-                                    <option value="training">Training & Workshops</option>
-                                    <option value="career">Career</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="col-12">
-                                <textarea class="form-control bg-light border-0" rows="3"
-                                    placeholder="Your Message"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-dark w-100 py-3" type="submit">Submit Your Request</button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="bg-primary rounded shadow h-100 d-flex align-items-center p-5 wow zoomIn"
+                    data-wow-delay="0.9s">
+                    <?php echo do_shortcode('[contact-form-7 id="97976" title="Contact form 3 - Quote"]'); ?>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
-<!-- Quote End -
+<!-- Quote End -->
 
 
 <?php

@@ -13,16 +13,27 @@
  */
 
 get_header();
+$index_page_id = 9;
+$quote_page_id = 18;
+$blog_page_id = 67;
 ?>
 
 <!-- Page Header Start -->
 <div class="container-fluid page-header py-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center py-5">
-        <h1 class="display-4 text-white animated slideInDown pt-5 mb-4">Blog 4</h1>
-        <nav aria-label="breadcrumb animated slideInDown">
+        <h1 class="display-4 text-white animated slideInDown m-5">
+            <?php echo get_field('blog_banner_page_name', get_the_ID()); ?>
+        </h1>
+        <nav aria-label="breadcrumb" class="animated slideInDown">
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                <li class="breadcrumb-item text-light active" aria-current="page">Blog 4</li>
+                <li class="breadcrumb-item">
+                    <a class="text-white" href="<?php echo get_field('blog_banner_page_home_link', get_the_ID()); ?>">
+                        <?php echo get_field('blog_banner_page_home_link_text', get_the_ID()); ?>
+                    </a>
+                </li>
+                <li class="breadcrumb-item text-light active" aria-current="page">
+                    <?php echo get_field('blog_banner_page_name', get_the_ID()); ?>
+                </li>
             </ol>
         </nav>
     </div>
@@ -30,230 +41,297 @@ get_header();
 <!-- Page Header End -->
 
 
-<!-- Blog Details Start  -->
+<!-- Blog Details Start -->
 <div class="container pt-5 pb-0 px-4 py-lg-5">
+
     <!-- About the Project Section -->
     <div class="text-start mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <img src="<?php bloginfo('template_directory'); ?>/img/blog/4.jpg"
-        alt="AI & Data Analytics Solutions" class="blog-custom-img border">
-        <h5 class="mt-3 fs-2">About the Project</h5>
-        <p class="mt-4" style="font-size: 16px; line-height: 1.6;">
-            Data Democrats leverages AI and advanced data analytics to empower organizations with actionable insights.
-            Our solutions combine real-time analytics, predictive modeling, and intelligent automation to help
-            enterprises make faster, smarter, and responsible decisions.
-        </p>
+        <?php 
+        $blog_image = get_field('blog_details_image', get_the_ID());
+        if ($blog_image) : ?>
+        <img src="<?php echo esc_url($blog_image); ?>" alt="Blog Image" class="blog-custom-img border img-fluid">
+        <?php endif; ?>
+
+        <h5 class="mt-3 fs-2 fw-bold">
+            <?php echo esc_html(get_field('blog_details_heading', get_the_ID())); ?>
+        </h5>
+
+        <?php echo get_field('blog_details_heading_description', get_the_ID()); ?>
+
         <div class="row text-center mt-4">
             <div class="col-md-4">
-                <h6>Location</h6>
-                <p>Pan India</p>
+                <h6>
+                    <?php echo esc_html(get_field('blog_details_loc1', get_the_ID())); ?>
+                </h6>
+                <?php echo get_field('blog_details_loc1_text', get_the_ID()); ?>
             </div>
             <div class="col-md-4">
-                <h6>Industry</h6>
-                <p>Technology & Analytics</p>
+                <h6>
+                    <?php echo esc_html(get_field('blog_details_loc2', get_the_ID())); ?>
+                </h6>
+                <?php echo get_field('blog_details_loc2_text', get_the_ID()); ?>
             </div>
             <div class="col-md-4">
-                <h6>Services Provided</h6>
-                <p>
-                    <span class="badge badge-warning text-white bg-primary">Data Analytics Solutions</span>
-                    <span class="badge badge-warning text-white bg-primary">AI & Machine Learning Implementation</span>
-                </p>
+                <h6>
+                    <?php echo esc_html(get_field('blog_details_loc3', get_the_ID())); ?>
+                </h6>
+                <?php echo get_field('blog_details_loc3_text', get_the_ID()); ?>
             </div>
         </div>
     </div>
 
     <!-- Business Situation Section -->
     <div class="wow fadeIn" data-wow-delay="0.2s">
-        <h5 class="mb-4 fs-2">Business Situation</h5>
-        <p style="font-size: 16px; line-height: 1.6;">
-            Enterprises often struggle with extracting meaningful insights from large volumes of data.
-            Manual analysis is time-consuming, error-prone, and fails to predict trends or optimize decisions.
-        </p>
-        <p style="font-size: 16px; line-height: 1.6;">
-            Clients approached Data Democrats to provide AI-driven analytics that deliver real-time insights,
-            predictive capabilities, and intelligent automation for better operational and strategic decisions.
-        </p>
+        <h5 class="mb-4 fs-2 fw-bold">
+            <?php echo esc_html(get_field('blog_details_situtaion_name', get_the_ID())); ?>
+        </h5>
+        <?php echo get_field('blog_details_situtaion_text', get_the_ID()); ?>
     </div>
 
     <!-- The Solution Section -->
     <div class="py-5 wow fadeIn" data-wow-delay="0.3s">
-        <h5 class="mb-4 fs-2">Our Approach</h5>
-        <p style="font-size: 16px; line-height: 1.6;">
-            Our AI & analytics solutions are designed to transform data into actionable intelligence:
-        </p>
-        <ul style="font-size: 16px; line-height: 2;">
-            <li>Data integration from multiple sources for unified analytics.</li>
-            <li>Real-time data processing for immediate insights.</li>
-            <li>Predictive modeling and trend analysis using AI/ML algorithms.</li>
-            <li>Automation of routine decisions and operational processes.</li>
-            <li>Generative AI for content creation, simulation, and scenario planning.</li>
-            <li>Custom dashboards and visualization for easy interpretation.</li>
-            <li>Ensuring data governance, privacy, and compliance.</li>
-        </ul>
-        <p style="font-size: 16px; line-height: 1.6;">
-            This structured approach enables clients to act on insights quickly, reduce operational risks, and
-            drive data-driven growth.
-        </p>
+        <h5 class="mb-4 fs-2 fw-bold">
+            <?php echo esc_html(get_field('blog_details_approch_name', get_the_ID())); ?>
+        </h5>
+        <?php echo get_field('blog_details_approch_text', get_the_ID()); ?>
     </div>
 
     <!-- Key Advantages -->
     <div class="wow fadeIn" data-wow-delay="0.4s">
-        <h5 class="mb-4 fs-2">Benefits of Choosing Data Democrats for AI & Analytics</h5>
-        <ul style="font-size: 16px; line-height: 2;">
-            <li>Faster and more informed decision-making.</li>
-            <li>Predictive insights to anticipate market trends and risks.</li>
-            <li>Automation of routine operational tasks.</li>
-            <li>Enhanced efficiency and reduced operational costs.</li>
-            <li>Improved accuracy and reliability of business insights.</li>
-            <li>Scalable solutions adaptable to evolving business needs.</li>
-        </ul>
+        <h5 class="mb-4 fs-2 fw-bold">
+            <?php echo esc_html(get_field('blog_details_advantage', get_the_ID())); ?>
+        </h5>
+        <?php echo get_field('blog_details_advantage_text', get_the_ID()); ?>
     </div>
 
     <!-- Client Trust Section -->
     <div class="py-5 wow fadeIn" data-wow-delay="0.5s">
-        <h5 class="mb-4 fs-2">Why Clients Trust Data Democrats</h5>
-        <p style="font-size: 16px; line-height: 1.6;">
-            Clients trust us for our expertise in AI and analytics, delivering solutions that translate complex data
-            into actionable strategies. Our approach ensures measurable outcomes, reliability, and scalability.
-        </p>
+        <h5 class="mb-4 fs-2 fw-bold">
+            <?php echo esc_html(get_field('blog_details_trust_us_name', get_the_ID())); ?>
+        </h5>
+        <?php echo get_field('blog_details_trust_us_text', get_the_ID()); ?>
     </div>
 
     <!-- Sustainability Commitment -->
     <div class="wow fadeIn" data-wow-delay="0.6s">
-        <h5 class="mb-4 fs-2">Sustainability & Efficiency</h5>
-        <p style="font-size: 16px; line-height: 1.6;">
-            Our AI and analytics solutions help optimize resources, reduce energy consumption, and minimize
-            waste, supporting sustainable operations while enabling smarter business decisions.
-        </p>
+        <h5 class="mb-4 fs-2 fw-bold">
+            <?php echo esc_html(get_field('blog_details_sustainability_name', get_the_ID())); ?>
+        </h5>
+        <?php echo get_field('blog_details_sustainability_text', get_the_ID()); ?>
+    </div>
+
+</div>
+<!-- Blog Details End -->
+
+
+<!-- Blog Start -->
+<div class="container-fluid blog py-5">
+    <div class="container py-3">
+
+        <!-- Blog Heading -->
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h1 class="display-5 text-capitalize text-primary mb-3 py-3">
+                <?php echo esc_html(get_field('blog_main_heading_text', $blog_page_id)); ?>
+            </h1>
+            <?php echo wp_kses_post(get_field('blog_main_description_text', $blog_page_id)); ?>
+        </div>
+
+        <!-- Blog Loop -->
+        <div class="row g-4">
+            <?php 
+        $blog_cpt = new WP_Query([
+          'post_type'      => 'blog_cpt',
+          'posts_per_page' => -1,
+          'orderby'        => 'title',
+          'order'          => 'ASC'
+        ]);
+
+        while ($blog_cpt->have_posts()) : $blog_cpt->the_post();
+          $blog_image       = get_field('blog_image');
+          $blog_date        = get_field('blog_date');
+          $blog_type        = get_field('blog_type_name');
+          $blog_comments    = get_field('blog_comments');
+          $blog_link        = get_field('blog_attach_link');
+          $blog_link_text   = get_field('blog_attach_link_text');
+          $blog_description = get_field('blog_about_description');
+          $blog_read_more   = get_field('blog_read_more');
+      ?>
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="blog-item">
+
+                    <!-- Blog Image -->
+                    <?php if ($blog_image): ?>
+                    <div class="blog-img">
+                        <img src="<?php echo esc_url($blog_image); ?>" class="img-fluid rounded-top w-100"
+                            alt="<?php echo esc_attr(get_the_title()); ?>">
+                    </div>
+                    <?php endif; ?>
+
+                    <!-- Blog Content -->
+                    <div class="blog-content rounded-bottom p-4">
+
+                        <?php if ($blog_date): ?>
+                        <div class="blog-date">
+                            <?php echo esc_html($blog_date); ?>
+                        </div>
+                        <?php endif; ?>
+
+                        <div class="blog-comment my-3 d-flex justify-content-between">
+                            <?php if ($blog_type): ?>
+                            <div class="small">
+                                <span class="fa fa-user text-primary"></span>
+                                <span class="ms-2">
+                                    <?php echo esc_html($blog_type); ?>
+                                </span>
+                            </div>
+                            <?php endif; ?>
+
+                            <?php if ($blog_comments): ?>
+                            <div class="small">
+                                <span class="fa fa-comment-alt text-primary"></span>
+                                <span class="ms-2">
+                                    <?php echo esc_html($blog_comments); ?>
+                                </span>
+                            </div>
+                            <?php endif; ?>
+                        </div>
+
+                        <!-- Blog Title -->
+                        <?php if ($blog_link && $blog_link_text): ?>
+                        <a href="<?php echo esc_url($blog_link); ?>" class="h4 d-block mb-3">
+                            <?php echo esc_html($blog_link_text); ?>
+                        </a>
+                        <?php endif; ?>
+
+                        <!-- Blog Short Description -->
+                        <?php if ($blog_description): ?>
+                        <div class="mb-3">
+                            <?php echo wp_kses_post($blog_description); ?>
+                        </div>
+                        <?php endif; ?>
+
+                        <!-- Read More -->
+                        <?php if ($blog_read_more && $blog_link): ?>
+                        <a href="<?php echo esc_url($blog_link); ?>" class="btn btn-primary">
+                            <?php echo esc_html($blog_read_more); ?> <i class="fa fa-arrow-right"></i>
+                        </a>
+                        <?php endif; ?>
+
+                    </div>
+                </div>
+            </div>
+            <?php endwhile; wp_reset_postdata(); ?>
+        </div>
     </div>
 </div>
-<!-- Blog Details End  -->
-
+<!-- Blog End -->
 
 
 <!-- FAQ Start -->
 <div class="container-fluid faq-section bg-light py-5">
     <div class="container py-5">
         <div class="row g-4 g-lg-5">
+            <!-- FAQ Text -->
             <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
-                <h4 class="text-primary">FAQs - Data Democrats Solution LLP</h4>
-                <h1 class="display-4 mb-4">Frequently Asked Questions</h1>
-                <p class="mb-4">
-                    Have questions about our digital transformation services, technology stack, or turnkey solutions?
-                    Here you’ll find answers to some of the most common queries from our clients.
-                </p>
-                <a class="btn btn-primary py-3 px-5" href="#contact">Ask Your Question</a>
+                <h4 class="text-primary">
+                    <?php echo esc_html(get_field('faqs_tittle', $index_page_id)); ?>
+                </h4>
+                <h1 class="display-4 mb-4">
+                    <?php echo esc_html(get_field('faqs_heading', $index_page_id)); ?>
+                </h1>
+                <?php echo wp_kses_post(get_field('faqs_description', $index_page_id)); ?>
+                <a class="btn btn-primary py-3 px-5" href="<?php the_field('faqs_link', $index_page_id); ?>">
+                    <?php echo esc_html(get_field('faqs_link_text', $index_page_id)); ?>
+                </a>
             </div>
+
+            <!-- FAQ Accordion -->
             <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
                 <div class="h-100">
                     <div class="accordion" id="accordionExample">
+                        <?php 
+                        $faqs_cpt = new WP_Query(array(
+                            'post_type'      => 'faqs_cpt',
+                            'posts_per_page' => -1,
+                            'order'          => 'ASC',
+                            'orderby'        => 'menu_order'
+                        ));
 
+                        $count = 0; 
+                        if ($faqs_cpt->have_posts()) :
+                            while ($faqs_cpt->have_posts()) : $faqs_cpt->the_post();
+                                $count++;
+                                $question        = get_field('faqs_question');
+                                $answer          = get_field('faqs_answer');
+                                $heading_id      = 'heading' . $count;
+                                $collapse_id     = 'collapse' . $count;
+                                $show_class      = ($count === 1) ? 'show' : '';
+                                $collapsed_class = ($count === 1) ? '' : 'collapsed';
+                        ?>
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Q: What industries does Data Democrats serve?
+                            <h2 class="accordion-header" id="<?php echo esc_attr($heading_id); ?>">
+                                <button class="accordion-button <?php echo esc_attr($collapsed_class); ?>" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#<?php echo esc_attr($collapse_id); ?>"
+                                    aria-expanded="<?php echo ($count === 1) ? 'true' : 'false'; ?>"
+                                    aria-controls="<?php echo esc_attr($collapse_id); ?>">
+                                    <?php echo esc_html($question); ?>
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show active"
-                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    A: We serve a wide range of industries including healthcare, manufacturing, smart cities, retail, pharmaceuticals, agriculture, data centers, and government projects through digital transformation solutions.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Q: What kind of technology solutions do you provide?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            <div id="<?php echo esc_attr($collapse_id); ?>"
+                                class="accordion-collapse collapse <?php echo esc_attr($show_class); ?>"
+                                aria-labelledby="<?php echo esc_attr($heading_id); ?>"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    A: Our offerings include SD-WAN, Cybersecurity & Threat Detection, IoT solutions, AI/ML, Advanced Data Analytics, Industry 4.0 digital transformation, Cloud & Data Center services, and Smart/Safe City projects.
+                                    <?php echo wp_kses_post($answer); ?>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Q: How do you ensure data security?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    A: We integrate AI-based cybersecurity systems for real-time threat detection, automated response, and adaptive protection. Our solutions follow international security standards to safeguard digital assets effectively.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Q: Do you provide turnkey digital transformation services?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    A: Yes, we specialize in turnkey digital transformation — from strategy consulting, technology integration, implementation, and security to ongoing support and optimization across enterprises.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Q: How can I get in touch with your team?
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    A: You can connect with our directors directly:  
-                                    • Madhsudhan Nambier (Director Technology Consulting) – mnambier@datademocrats.in  
-                                    • Hemkant Patil (Director) – hemkant.patil@datademocrats.in  
-                                    • Pramod Murkewar (Director) – pramod.murkewar@datademocrats.in  
-                                </div>
-                            </div>
-                        </div>
+                        <?php 
+                            endwhile; 
+                            wp_reset_postdata(); 
+                        endif;
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- FAQ End -->
+<!-- FAQ Section End -->
 
 
 <!-- Quote Start -->
 <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container py-5">
         <div class="row g-5">
+
+            <!-- Left Content -->
             <div class="col-lg-7">
                 <div class="section-title position-relative pb-3 mb-5">
-                    <h5 class="fw-bold text-primary text-uppercase">Request A Consultation</h5>
-                    <h1 class="mb-0">Kickstart Your Digital Transformation with Data Democrats</h1>
+                    <h5 class="fw-bold text-primary text-uppercase">
+                        <?php echo esc_html(get_field('quote_main_name', $quote_page_id)); ?>
+                    </h5>
+                    <h2 class="mb-0">
+                        <?php echo esc_html(get_field('quote_main_subname', $quote_page_id)); ?>
+                    </h2>
                 </div>
+
                 <div class="row gx-3">
                     <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                        <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Quick Response Within 24 Hours</h5>
+                        <h5 class="mb-4">
+                            <i class="fa fa-reply text-primary me-3"></i>
+                            <?php echo esc_html(get_field('quote_main_subheading1', $quote_page_id)); ?>
+                        </h5>
                     </div>
                     <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                        <h5 class="mb-4"><i class="fa fa-headset text-primary me-3"></i>Expert Data & Tech Support</h5>
+                        <h5 class="mb-4">
+                            <i class="fa fa-headset text-primary me-3"></i>
+                            <?php echo esc_html(get_field('quote_main_subheading2', $quote_page_id)); ?>
+                        </h5>
                     </div>
                 </div>
-                <p class="mb-4">
-                    Ready to unlock the power of data-driven decision-making?  
-                    Data Democrats helps businesses with analytics, AI, cloud solutions, and digital transformation.  
-                    Share your details and our experts will connect with you to discuss tailored solutions for your needs.
+                <p>
+                    <?php echo wp_kses_post(get_field('quote_main_description', $quote_page_id)); ?>
                 </p>
                 <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
                     <div class="bg-primary d-flex align-items-center justify-content-center rounded"
@@ -261,58 +339,26 @@ get_header();
                         <i class="fa fa-phone-alt text-white"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-2">Need immediate assistance?</h5>
-                        <h4 class="text-primary mb-0">+91-8451963300</h4>
+                        <h5 class="mb-2">
+                            <?php echo esc_html(get_field('quote_main_assistance', $quote_page_id)); ?>
+                        </h5>
+                        <h4 class="text-primary mb-0">
+                            <?php echo esc_html(get_field('quote_contact_number', $quote_page_id)); ?>
+                        </h4>
                     </div>
                 </div>
             </div>
+            <!-- Right Form -->
             <div class="col-lg-5">
-                <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <input type="text" class="form-control bg-light border-0" placeholder="Your Name *"
-                                    style="height: 55px;" required>
-                            </div>
-                            <div class="col-12">
-                                <input type="text" class="form-control bg-light border-0" placeholder="Company Name"
-                                    style="height: 55px;">
-                            </div>
-                            <div class="col-12">
-                                <input type="email" class="form-control bg-light border-0" placeholder="Email Address *"
-                                    style="height: 55px;" required>
-                            </div>
-                            <div class="col-12">
-                                <input type="tel" class="form-control bg-light border-0" placeholder="Phone Number"
-                                    style="height: 55px;">
-                            </div>
-                            <div class="col-12">
-                                <select class="form-select bg-light border-0" style="height: 55px;" required>
-                                    <option selected disabled>Type of Inquiry *</option>
-                                    <option value="data-analytics">Data Analytics</option>
-                                    <option value="ai-ml">AI / Machine Learning</option>
-                                    <option value="cloud-solutions">Cloud Solutions</option>
-                                    <option value="digital-transformation">Digital Transformation</option>
-                                    <option value="training">Training & Workshops</option>
-                                    <option value="career">Career</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="col-12">
-                                <textarea class="form-control bg-light border-0" rows="3"
-                                    placeholder="Your Message"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-dark w-100 py-3" type="submit">Submit Your Request</button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="bg-primary rounded shadow h-100 d-flex align-items-center p-5 wow zoomIn"
+                    data-wow-delay="0.9s">
+                    <?php echo do_shortcode('[contact-form-7 id="97976" title="Contact form 3 - Quote"]'); ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Quote End -
+<!-- Quote End -->
 
 
 <?php

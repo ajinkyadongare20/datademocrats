@@ -20,7 +20,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="<?php bloginfo('template_directory'); ?>/img/datademocrats_logo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,8 +69,12 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                <h3 class="fw-bold text-primary m-0">Data<span class="text-white"> Democrats</span></h3>
+                <!-- Logo image -->
+                <img src="<?php echo get_template_directory_uri(); ?>/img/datademocrats_logo.png" 
+                    alt="Data Democrats" 
+                    class="img-fluid logo-header-img">
             </a>
+
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
