@@ -225,7 +225,7 @@ h6,
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(0, 29, 35, .8) !important;
+    background: rgb(56 67 98 / 80%) !important;
     z-index: 1;
 }
 

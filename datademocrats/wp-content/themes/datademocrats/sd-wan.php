@@ -131,7 +131,7 @@ $quote_page_id = 18;
 <!-- Services End -->
 
 
-<!-- SD-WAN Content -->
+<!-- SD-WAN Content Architecture Start -->
 <div class="container py-5">
     <div class="row g-5">
         <h1 class="display-6 text-center mb-4"><?php echo esc_html(get_field('technology_solutions_architecture_heading')); ?></h1>
@@ -178,7 +178,7 @@ $quote_page_id = 18;
         <div class="col-lg-4 wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
             <div class="position-relative h-100">
                 <img class="position-absolute w-100 h-100 rounded" 
-                     src="<?php bloginfo('template_directory'); ?>/img/index/sd_wan.png" 
+                     src="<?php echo esc_url(get_field('technology_solutions_architecture_image', get_the_ID())); ?>" 
                      style="object-fit: contain; border: 1px solid black;">
             </div>
         </div>
@@ -261,7 +261,7 @@ $quote_page_id = 18;
         ?>
     </div>
 </div>
-<!--End SD-WAN Content -->
+<!--End SD-WAN Content Architecture End -->
 
 
 <!--Start Why Businesses Choose Data Democrats -->
@@ -269,56 +269,40 @@ $quote_page_id = 18;
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-primary text-uppercase mb-2">Why Businesses Choose Data Democrats</h6>
-                <h1 class="display-6 mb-4">Smarter, Faster & Secure SD-WAN Solutions</h1>
-                <p class="mb-5">
-                    Data Democrats is a trusted technology partner delivering SD-WAN solutions that optimize connectivity, 
-                    improve agility, and ensure enterprise-grade security. With centralized control, application-aware routing, 
-                    and multi-cloud integration, we enable organizations to achieve unmatched network flexibility and cost savings.
-                </p>
+                <h6 class="text-primary text-uppercase mb-2"><?php echo esc_html(get_field('technology_solutions_businesses_heading')); ?></h6>
+                <h1 class="display-6 mb-4"><?php echo esc_html(get_field('technology_solutions_businesses_subheading')); ?></h1>
+                <?php echo wp_kses_post(get_field('technology_solutions_businesses_description')); ?>
                 <div class="row gy-5 gx-4">
+
+                    <?php 
+                    $technology_businesse = new WP_Query(array(
+                        'post_type'      => 'technology_businesse',
+                        'posts_per_page' => -1,
+                        'orderby'        => 'date',
+                        'order'          => 'ASC'
+                    ));
+                    if ($technology_businesse->have_posts()) :
+                        while ($technology_businesse->have_posts()) : $technology_businesse->the_post(); ?>
+
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                         <div class="d-flex align-items-center mb-3">
                             <div class="flex-shrink-0 btn-square bg-primary me-3">
-                                <i class="fa fa-check text-white"></i>
+                                <i class="<?php echo esc_html(get_field('technology_solution_businesses_icon')); ?> text-white"></i>
                             </div>
-                            <h5 class="mb-0">Centralized Management</h5>
+                            <h5 class="mb-0"><?php echo esc_html(get_field('technology_solution_businesses_heading')); ?></h5>
                         </div>
-                        <span>Manage and monitor all network devices and connections from a single interface.</span>
+                        <?php echo wp_kses_post(get_field('technology_solution_businesses_description')); ?>
                     </div>
-                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="flex-shrink-0 btn-square bg-primary me-3">
-                                <i class="fa fa-check text-white"></i>
-                            </div>
-                            <h5 class="mb-0">Cost Efficiency</h5>
-                        </div>
-                        <span>Reduce network costs by leveraging broadband, LTE, and hybrid connectivity with better performance.</span>
-                    </div>
-                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="flex-shrink-0 btn-square bg-primary me-3">
-                                <i class="fa fa-check text-white"></i>
-                            </div>
-                            <h5 class="mb-0">Real-Time Visibility</h5>
-                        </div>
-                        <span>Gain deep insights into application traffic, performance, and security across the WAN.</span>
-                    </div>
-                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="flex-shrink-0 btn-square bg-primary me-3">
-                                <i class="fa fa-check text-white"></i>
-                            </div>
-                            <h5 class="mb-0">Faster Deployment</h5>
-                        </div>
-                        <span>Deploy SD-WAN quickly with reliable connectivity and zero-touch provisioning.</span>
-                    </div>
+                    <?php endwhile; 
+                    wp_reset_postdata();
+                endif;
+                ?>
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="position-relative overflow-hidden pe-5 pt-5 h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="<?php bloginfo('template_directory'); ?>/img/technology/sd_wan.jpg" alt="SD-WAN Solutions" style="object-fit: cover;">
-                    <img class="position-absolute top-0 end-0 bg-white ps-3 pb-3" src="<?php echo esc_url(''); ?>" alt="SD-WAN Features" style="width: 200px; height: 200px">
+                    <img class="position-absolute w-100 h-100" src="<?php echo esc_url(get_field('technology_solutions_businesses_image_1', get_the_ID())); ?>" alt="SD-WAN Solutions" style="object-fit: cover;">
+                    <img class="position-absolute top-0 end-0 bg-white ps-3 pb-3" src="<?php echo esc_url(get_field('technology_solutions_businesses_image_2', get_the_ID())); ?>" alt="SD-WAN Features" style="width: 200px; height: 200px">
                 </div>
             </div>
         </div>

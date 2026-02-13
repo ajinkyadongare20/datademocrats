@@ -79,7 +79,6 @@ $quote_page_id = 18;
 <!-- End Overview Section -->
 
 
-
 <!-- Start History Section -->
 <div class="container-fluid pb-5">
     <div class="row">

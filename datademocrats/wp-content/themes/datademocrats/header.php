@@ -1,7 +1,7 @@
 <?php
 /**
  * The header for our theme
- *
+ * Template Name: Header
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -68,7 +68,7 @@
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <a href="<?php echo site_url('/index.php'); ?>" class="navbar-brand ms-4 ms-lg-0">
                 <!-- Logo image -->
                 <img src="<?php echo get_template_directory_uri(); ?>/img/datademocrats_logo.png" 
                     alt="Data Democrats" 
